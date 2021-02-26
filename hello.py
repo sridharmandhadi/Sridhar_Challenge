@@ -5,7 +5,7 @@ N=int(input())
 entr = [ input()  for i in range(N) ]
 
 
-def count_consecutive(i):
+def counts(i):
      return max([len(list(g)) for k, g in groupby(i)])
 
 for i in entr:
@@ -14,7 +14,7 @@ for i in entr:
 
 
     if re.search(pattn, i) or re.search(pattn2, i) :
-        if count_consecutive(i.replace('-',""))>=4 :
+        if counts(i.replace('-',""))>=4 :
            print('Invalid')
         else:
            print('Valid')
