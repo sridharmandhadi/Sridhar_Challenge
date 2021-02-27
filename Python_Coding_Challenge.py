@@ -9,8 +9,8 @@ def counts(i):
      return max([len(list(g)) for k, g in groupby(i)])
 
 for i in entr:
-    pattn = re.compile(r"^[4,5,6]([0-9]{15}$)")
-    pattn2 = re.compile(r"^[4,5,6]\d{3}-[0-9]{4}-[0-9]{4}-[0-9]{4}$")
+    pattn = re.compile(r"^[4,5,6](\d{15}$)")
+    pattn2 = re.compile(r"^[4,5,6]\d{3}-\d{4}-\d{4}-\d{4}$")
 
 
     if re.search(pattn, i) or re.search(pattn2, i) :
