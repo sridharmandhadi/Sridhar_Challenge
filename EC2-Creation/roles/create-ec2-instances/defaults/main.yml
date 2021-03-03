@@ -1,0 +1,10 @@
+---
+# defaults file for create-ec2-instances
+instance_type: t2.micro
+security_group: webservers_sg
+image: ami-03d64741867e7bb94
+keypair: aws_instance_Ansible123
+region: us-east-2
+count: 1
+instance_name: 'jumpbox'
+ 

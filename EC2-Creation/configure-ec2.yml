@@ -1,0 +1,16 @@
+- hosts: jumpbox
+  become: True
+  gather_facts: True
+  tasks:
+    - package:
+        name: httpd
+        state: present
+    - service:
+         name: httpd
+         state: started
+         enabled: yes
+    - name: copy the index file onto server
+      copy: 
+         src: index.html
+         dest: /var/www/html
+               
